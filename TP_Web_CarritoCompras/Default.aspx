@@ -7,8 +7,14 @@
     </div>
 
     <div class="container-busqueda">
-
-        <div class="articulo">
+        <% foreach (var item in listado)
+        {%>
+            <div class="articulo">
+                <p><%: item.Nombre %></p>
+                <p><%: item.Precio %></p>
+            </div>
+        <%} %>
+        <%--<div class="articulo">
             <p>articulo</p>
         </div>
         <div class="articulo">
@@ -22,6 +28,6 @@
         </div>
         <div class="articulo">
             <p>articulo</p>
-        </div>
+        </div>--%>
     </div>
 </asp:Content>
