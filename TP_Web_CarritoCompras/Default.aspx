@@ -10,6 +10,7 @@
         <% foreach (var item in listado)
         {%>
             <div class="articulo">
+                <img src="<%: item.ImagenUrl %>" alt="Alternate Text" />
                 <p><%: item.Nombre %></p>
                 <p><%: item.Precio %></p>
             </div>
