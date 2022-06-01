@@ -12,11 +12,21 @@ namespace TP_Web_CarritoCompras
     public partial class _Default : Page
     {
         public List<Articulo> listado{ get; set; }
+        //public List <Articulo> listaFiltrada{ get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             ArticuloNegocio articulo = new ArticuloNegocio();
-            listado = new List<Articulo>();
+            //listaFiltrada = new List<Articulo>();
+            //listado = new List<Articulo>();
             listado = articulo.listar();
+        }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string filtro = txtBusqueda.Text;
+            //listaFiltrada = listado.FindAll(x => x.Nombre.ToLower().Contains(filtro.ToLower()));
+            Session.Add("nombreArticulo", filtro);
+            Response.Redirect("Busqueda.aspx", false);
         }
     }
 }
