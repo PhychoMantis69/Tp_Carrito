@@ -23,5 +23,10 @@ namespace TP_Web_CarritoCompras
             filtro = Session["nombreArticulo"] != null ? Session["nombreArticulo"].ToString() : "-";
             listaFiltrada = listadoArticulos.FindAll(x => x.Nombre.ToLower().Contains(filtro.ToLower()));
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

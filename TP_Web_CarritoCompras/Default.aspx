@@ -14,7 +14,17 @@
                 <%--<img src="<%: item.ImagenUrl %>" alt="Alternate Text" />--%>
                 <p><%: item.Nombre %></p>
                 <p><%: item.Precio %></p>
+                <a href="Default.aspx?id= <%:item.ID %>">Añadir</a>
+
+
+                <% //string pupi = item.ID.ToString(); %>
+
             </div>
         <%} %>
+
+        <asp:Label ID="pupi" runat="server" Text="Label"></asp:Label>
+
+        <asp:Button ID="Carrito" runat="server" Text="Ver carrito" OnClick="Carrito_Click" />
+
     </div>
 </asp:Content>
